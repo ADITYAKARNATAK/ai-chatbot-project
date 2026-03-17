@@ -1,0 +1,30 @@
+User: aditya
+Bot: Take care
+User: thank you
+Bot: No problem!
+User: thnx
+Bot: Goodbye!
+User: dsafsg
+Bot: I don't understand
+User: thnx
+Bot: I don't understand
+User: thank you 
+Bot: You're welcome!
+User: hello
+Bot: Hey!
+-----------------
+User: how are you
+Bot: I don't understand
+-----------------
+Time: 2026-03-17 23:09:58
+User: hey 
+Bot: Hi there!
+-----------------
+Time: 2026-03-17 23:17:19
+User: hey
+Bot: Hello!
+-----------------
+Time: 2026-03-17 23:17:26
+User: thank you
+Bot: You're welcome!
+-----------------
