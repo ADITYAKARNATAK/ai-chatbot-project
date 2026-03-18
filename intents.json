@@ -1,35 +1,537 @@
 {
   "intents": [
+{
+"tag": "greeting",
+"patterns": [
+"hello","hi","hey","hey there","hello bot","hi bot","hi chatbot",
+"good morning","good evening","good afternoon",
+"yo","hi assistant","hello assistant","hey buddy","hi there"
+],
+"responses": ["Hello!","Hi there!","Hey!","Hello, how can I help?"]
+},
 
-    {
-      "tag": "greeting",
-      "patterns": ["hello", "hi", "hey", "good morning", "good evening"],
-      "responses": ["Hello!", "Hi there!", "Hey!", "Hello, how can I help?"]
-    },
+{
+"tag": "goodbye",
+"patterns": [
+"bye","goodbye","see you","see you later","bye bye",
+"ok bye","talk later","catch you later","see ya",
+"good night","exit","quit","i am leaving","later bro","bye bot"
+],
+"responses": ["Goodbye!","See you later!","Take care!"]
+},
 
-    {
-      "tag": "goodbye",
-      "patterns": ["bye", "see you", "goodbye", "later"],
-      "responses": ["Goodbye!", "See you later!", "Bye!", "Take care"]
-    },
+{
+"tag": "thanks",
+"patterns": [
+"thanks","thank you","thx","thanks a lot",
+"thank you so much","thanks bot","thank you chatbot",
+"appreciate it","thanks for help","many thanks",
+"ok thanks","cool thanks","thanks buddy","thanks again","ty"
+],
+"responses": ["You're welcome","No problem","Anytime","Glad to help"]
+},
 
-    {
-      "tag": "thanks",
-      "patterns": ["thanks", "thank you", "thx"],
-      "responses": ["You're welcome!", "No problem!", "Anytime!"]
-    },
+{
+"tag": "name",
+"patterns": [
+"your name","what is your name","who are you",
+"tell your name","may i know your name",
+"what should i call you","name please",
+"introduce yourself","who is this",
+"what are you","your identity","bot name",
+"chatbot name","assistant name","who am i talking to"
+],
+"responses": ["I am an AI chatbot","I am your assistant","You can call me AI Bot"]
+},
 
-    {
-      "tag": "name",
-      "patterns": ["your name", "who are you", "what is your name"],
-      "responses": ["I am AI chatbot", "I am your assistant"]
-    },
+{
+"tag": "howareyou",
+"patterns": [
+"how are you","are you fine","how are you doing",
+"how is life","are you ok","are you good",
+"how you doing","everything fine",
+"how do you feel","are you working",
+"what's up","sup","you good","how are things","all good"
+],
+"responses": ["I am fine","Doing great","All good","Working perfectly"]
+},
 
-    {
-      "tag": "college",
-      "patterns": ["which project", "what project", "ai project"],
-      "responses": ["This is AI chatbot project", "NLP chatbot project"]
-    }
+{
+"tag": "creator",
+"patterns": [
+"who made you","who created you","who built you",
+"your developer","who is your creator",
+"who programmed you","who coded you",
+"who designed you","who developed you",
+"who is behind you","who owns you",
+"who made this bot","who wrote this",
+"which student made you","who built this chatbot"
+],
+"responses": ["I was created as a student AI project","I was built using Python and ML"]
+},
 
+{
+"tag": "python",
+"patterns": [
+"what is python","define python","python language",
+"tell me about python","python meaning",
+"python programming","why python",
+"python used for","what is python used for",
+"python explain","python info",
+"is python language","python definition",
+"about python","python details"
+],
+"responses": ["Python is a programming language used in AI, web, and software development"]
+},
+
+{
+"tag": "ai",
+"patterns": [
+"what is ai","define ai","artificial intelligence",
+"ai meaning","ai explain","about ai",
+"what is artificial intelligence",
+"ai definition","ai full form",
+"ai info","ai technology",
+"ai subject","ai course",
+"ai use","ai example"
+],
+"responses": ["AI means artificial intelligence, machines that can think and learn"]
+},
+
+{
+"tag": "ml",
+"patterns": [
+"machine learning","what is ml","define ml",
+"ml meaning","ml explain","about machine learning",
+"ml definition","ml full form",
+"ml example","ml use",
+"ml algorithm","ml subject",
+"ml course","ml basics","ml info"
+],
+"responses": ["Machine learning is a part of AI where machines learn from data"]
+},
+
+{
+"tag": "study",
+"patterns": [
+"how to study","study tips","how to focus",
+"how to learn fast","study method",
+"study technique","how to remember",
+"how to concentrate","study help",
+"study advice","exam preparation",
+"how to prepare","study plan",
+"how to revise","learning tips"
+],
+"responses": ["Stay consistent, practice daily, revise regularly"]
+}
+
+,{
+"tag": "motivation",
+"patterns": [
+"motivate me","i feel lazy","no motivation",
+"how to stay motivated","i am tired",
+"i feel low","give motivation",
+"need motivation","how to be disciplined",
+"how to stay consistent","i feel bored",
+"i am not focused","push me to work",
+"help me focus","inspire me"
+],
+"responses": ["Start small, stay consistent, and keep moving forward"]
+},
+
+{
+"tag": "joke",
+"patterns": [
+"tell joke","make me laugh","joke please",
+"funny joke","say something funny",
+"entertain me","give me joke",
+"crack joke","tell funny line",
+"one joke","best joke",
+"i want to laugh","joke now",
+"funny thing","make me smile"
+],
+"responses": ["Why did the programmer quit? Because he didn't get arrays 😂"]
+},
+
+{
+"tag": "time",
+"patterns": [
+"what time is it","tell me time","current time",
+"time now","time please",
+"give time","show time",
+"can you tell time","time info",
+"what is current time","clock time",
+"present time","time update",
+"time check","now time"
+],
+"responses": ["I cannot access real time, please check your device"]
+},
+
+{
+"tag": "date",
+"patterns": [
+"what is today's date","tell date","current date",
+"today date","date today",
+"what date","show date",
+"date please","present date",
+"date now","calendar date",
+"today's day","date info",
+"which date","date check"
+],
+"responses": ["I cannot access live date, please check your system"]
+},
+
+{
+"tag": "weather",
+"patterns": [
+"weather today","how is weather","tell weather",
+"weather now","current weather",
+"weather update","temperature today",
+"rain today","sunny or not",
+"weather forecast","weather info",
+"climate today","weather condition",
+"is it raining","weather check"
+],
+"responses": ["I cannot access live weather, please check online"]
+},
+
+{
+"tag": "math",
+"patterns": [
+"2+2","calculate 2+2","simple math",
+"math question","solve 2+2",
+"basic math","math help",
+"calculate","do math",
+"2 plus 2","addition",
+"solve math","math problem",
+"quick calculation","math answer"
+],
+"responses": ["2 + 2 = 4"]
+},
+
+{
+"tag": "college",
+"patterns": [
+"which project","what project","ai project",
+"college project","your project",
+"project info","what are you",
+"project details","what is this",
+"project name","project explanation",
+"college assignment","lab project",
+"ai chatbot project","project description"
+],
+"responses": ["This is an AI chatbot project using NLP and Machine Learning"]
+},
+
+{
+"tag": "language",
+"patterns": [
+"which language","language used","programming language",
+"what language you use","built in which language",
+"which programming language","code language",
+"what tech used","language of chatbot",
+"what language used","backend language",
+"which coding language","python used",
+"what language built","tech stack language"
+],
+"responses": ["I am built using Python"]
+},
+
+{
+"tag": "hobby",
+"patterns": [
+"your hobby","what do you like","your interest",
+"what you like","hobby of bot",
+"your favorite thing","what you enjoy",
+"your interest area","what do you do",
+"what you like to do","favorite activity",
+"hobby chatbot","what makes you happy",
+"your likes","bot interest"
+],
+"responses": ["I like helping users and answering questions"]
+},
+
+{
+"tag": "help",
+"patterns": [
+"help me","can you help","need help",
+"assist me","i need help",
+"support me","guide me",
+"help required","can you assist",
+"please help","help needed",
+"i need assistance","give help",
+"support needed","assist please"
+],
+"responses": ["Yes, I am here to help you"]
+},
+{
+"tag": "age",
+"patterns": [
+"your age","how old are you","age of chatbot",
+"what is your age","bot age","how old",
+"your age please","tell your age",
+"are you old","age info",
+"when were you created","age of ai",
+"do you have age","age number","your birth"
+],
+"responses": ["I don't have an age like humans"]
+},
+
+{
+"tag": "human",
+"patterns": [
+"are you human","robot or human","are you real",
+"are you bot","are you machine",
+"human or ai","are you person",
+"real or fake","are you alive",
+"are you real human","do you have body",
+"are you computer","human chatbot",
+"ai or human","who are you really"
+],
+"responses": ["I am an AI chatbot, not a human"]
+},
+
+{
+"tag": "goal",
+"patterns": [
+"your goal","why created","purpose of chatbot",
+"why are you made","your aim",
+"your objective","what is your purpose",
+"why do you exist","goal of ai",
+"aim of chatbot","why built",
+"reason for creation","mission of chatbot",
+"purpose of ai","goal info"
+],
+"responses": ["My goal is to help users and answer questions"]
+},
+
+{
+"tag": "food",
+"patterns": [
+"favorite food","what do you eat","food you like",
+"what is your food","do you eat",
+"food choice","favorite dish",
+"what food you like","food preference",
+"do you like food","eat something",
+"food habit","favorite meal",
+"do bots eat","food interest"
+],
+"responses": ["I don't eat food, I am a chatbot"]
+},
+
+{
+"tag": "sleep",
+"patterns": [
+"do you sleep","when do you sleep","sleep time",
+"sleeping chatbot","do you rest",
+"need sleep","sleep habit",
+"are you sleeping","sleep info",
+"sleep requirement","do bots sleep",
+"night sleep","sleep cycle",
+"are you tired","sleep needed"
+],
+"responses": ["I don't sleep, I work 24/7"]
+},
+
+{
+"tag": "work",
+"patterns": [
+"what do you do","your work","your job",
+"what is your work","job of chatbot",
+"what is your task","what you do",
+"work purpose","daily work",
+"task of ai","job role",
+"work info","bot job",
+"what is your function","what you are used for"
+],
+"responses": ["My work is to answer your questions"]
+},
+
+{
+"tag": "education",
+"patterns": [
+"what do you study","education of chatbot","your education",
+"study background","did you study",
+"education level","what have you learned",
+"training of chatbot","how trained",
+"what you learned","study info",
+"learning source","education info",
+"how did you learn","training data"
+],
+"responses": ["I am trained using machine learning and data"]
+},
+
+{
+"tag": "skills",
+"patterns": [
+"your skills","what can you do","your abilities",
+"skills of chatbot","what you can do",
+"your capability","functions of chatbot",
+"features of chatbot","your features",
+"skills info","what tasks you perform",
+"abilities of ai","what services you give",
+"what you know","skills list"
+],
+"responses": ["I can answer questions and assist users"]
+},
+
+{
+"tag": "technology",
+"patterns": [
+"technology used","what tech used","tools used",
+"which technology","what framework",
+"software used","what tech stack",
+"which tools","development tools",
+"technology info","stack used",
+"which framework used","backend tools",
+"tech details","software stack"
+],
+"responses": ["I use Python, NLP, and Machine Learning"]
+},
+
+{
+"tag": "internet",
+"patterns": [
+"do you use internet","internet access","are you online",
+"do you browse internet","can you search web",
+"internet usage","web access",
+"online chatbot","internet info",
+"do you connect internet","web search",
+"internet capability","are you connected",
+"can you google","online access"
+],
+"responses": ["I do not access the internet in real-time"]
+},
+{
+"tag": "greeting_extended",
+"patterns": [
+"hey bot how are you","hello again","hi once more",
+"good day","hey assistant","hello my friend",
+"hi again","greetings","warm greetings",
+"hey how is it going","hello there buddy",
+"good to see you","hi hi","hello hello","hey again"
+],
+"responses": ["Hello again!","Hi! Nice to see you again"]
+},
+
+{
+"tag": "farewell_extended",
+"patterns": [
+"see you soon","talk to you later","catch you soon",
+"i will come later","ending chat","closing chat",
+"i am done","finish conversation","bye for now",
+"talk later buddy","see you next time",
+"bye take care","leaving now","chat ended","goodbye friend"
+],
+"responses": ["See you soon!","Goodbye and take care"]
+},
+
+{
+"tag": "programming",
+"patterns": [
+"what is programming","define programming",
+"programming meaning","coding meaning",
+"what is coding","learn programming",
+"why programming","programming basics",
+"coding language","what is code",
+"software development","coding explanation",
+"programming info","coding definition","learn coding"
+],
+"responses": ["Programming is writing instructions for computers to perform tasks"]
+},
+
+{
+"tag": "developer",
+"patterns": [
+"who is developer","what is developer",
+"software developer meaning","who writes code",
+"developer role","developer job",
+"who makes software","who builds apps",
+"developer info","what does developer do",
+"programmer meaning","coder meaning",
+"developer explanation","developer definition","developer work"
+],
+"responses": ["A developer is a person who creates software and applications"]
+},
+
+{
+"tag": "exam",
+"patterns": [
+"exam tips","how to prepare exam","exam preparation",
+"how to score marks","exam strategy",
+"study for exam","how to pass exam",
+"exam help","prepare for test",
+"exam guidance","how to revise",
+"last day study","exam planning",
+"exam advice","exam tips please"
+],
+"responses": ["Prepare regularly, revise concepts, and practice questions"]
+},
+
+{
+"tag": "career",
+"patterns": [
+"career advice","how to choose career",
+"career guidance","future career",
+"best career options","career path",
+"what should i do","career planning",
+"job future","career help",
+"career suggestion","choose career",
+"future planning","career options","career tips"
+],
+"responses": ["Choose a career based on your interest and skills"]
+},
+
+{
+"tag": "success",
+"patterns": [
+"how to succeed","success tips","how to become successful",
+"success advice","achieve success",
+"how to win","be successful",
+"success mindset","success habits",
+"grow in life","how to improve",
+"success guide","be better","life success","success help"
+],
+"responses": ["Consistency, discipline, and hard work lead to success"]
+},
+
+{
+"tag": "failure",
+"patterns": [
+"i failed","fear of failure","how to handle failure",
+"failure meaning","failure help",
+"what if i fail","deal with failure",
+"failure advice","failure motivation",
+"i am not successful","failure tips",
+"how to recover","failure learning",
+"learn from failure","failure support"
+],
+"responses": ["Failure is part of learning, keep trying and improving"]
+},
+
+{
+"tag": "friend",
+"patterns": [
+"be my friend","are you my friend","friend chatbot",
+"can we be friends","you are my friend",
+"talk like friend","friend talk",
+"friendship","my friend","best friend",
+"become friend","friendship chatbot",
+"friend help","friend support","chat like friend"
+],
+"responses": ["Of course, I am always here as your friend"]
+},
+
+{
+"tag": "fun",
+"patterns": [
+"let's have fun","fun talk","entertainment",
+"bored","i am bored","do something fun",
+"fun activity","chat fun","timepass",
+"fun chat","interesting talk","random talk",
+"make it fun","fun mode","let's chill"
+],
+"responses": ["Let's make this conversation fun! Ask me anything"]
+}
   ]
 }
