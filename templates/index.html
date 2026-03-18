@@ -1,62 +1,149 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AI Chatbot</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<title>AI Chatbot</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 <body>
 
-<div class="wrapper">
 
-    <div class="chat-box">
+<div class="chat-container">
 
-        <div class="header">
-            🤖 AI Chatbot
-        </div>
+<div class="header">
 
-        <div id="chatbox" class="chat-area"></div>
-
-        <div class="input-area">
-            <input id="userInput" type="text" placeholder="Type message...">
-            <button onclick="sendMessage()">Send</button>
-        </div>
-
-    </div>
+🤖 AI Chatbot
 
 </div>
 
 
+<div id="chatbox" class="chatbox"></div>
+
+
+<div class="input-area">
+
+<input id="userInput" type="text" placeholder="Type message...">
+
+<button onclick="sendMessage()">Send</button>
+
+</div>
+
+
+</div>
+
+
+
+<audio id="sound">
+<source src="https://www.soundjay.com/buttons/sounds/button-3.mp3">
+</audio>
+
+
 <script>
+
+
+function getTime() {
+
+let d = new Date();
+
+return d.getHours() + ":" + d.getMinutes();
+
+}
+
+
 
 function sendMessage() {
 
-    let input = document.getElementById("userInput");
-    let msg = input.value;
+let input = document.getElementById("userInput");
 
-    if (msg.trim() === "") return;
+let msg = input.value;
 
-    let chatbox = document.getElementById("chatbox");
+if(msg.trim() === "") return;
 
-    chatbox.innerHTML += `<div class="msg user">${msg}</div>`;
+let chatbox = document.getElementById("chatbox");
 
-    fetch("/get", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: "msg=" + msg
-    })
-    .then(response => response.text())
-    .then(data => {
+let time = getTime();
 
-        chatbox.innerHTML += `<div class="msg bot">${data}</div>`;
+document.getElementById("sound").play();
 
-        chatbox.scrollTop = chatbox.scrollHeight;
+chatbox.innerHTML +=
 
-    });
+`<div class="message user">
 
-    input.value = "";
+<img src="https://i.imgur.com/HYcn9xO.png">
+
+<div>
+
+${msg}
+
+<span>${time}</span>
+
+</div>
+
+</div>`;
+
+
+input.value = "";
+
+
+chatbox.innerHTML +=
+
+`<div class="message bot typing">
+
+<img src="https://i.imgur.com/7k12EPD.png">
+
+<div>Typing...</div>
+
+</div>`;
+
+
+fetch("/get", {
+
+method: "POST",
+
+headers: {
+
+"Content-Type": "application/x-www-form-urlencoded"
+
+},
+
+body: "msg=" + msg
+
+})
+
+.then(response => response.text())
+
+.then(data => {
+
+let typing = document.querySelector(".typing");
+
+typing.remove();
+
+let time = getTime();
+
+chatbox.innerHTML +=
+
+`<div class="message bot">
+
+<img src="https://i.imgur.com/7k12EPD.png">
+
+<div>
+
+${data}
+
+<span>${time}</span>
+
+</div>
+
+</div>`;
+
+chatbox.scrollTop = chatbox.scrollHeight;
+
+});
+
 }
+
 
 </script>
 

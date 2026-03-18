@@ -36,3 +36,11 @@ Time: 2026-03-18 22:23:35
 User: how are you
 Bot: Doing great
 -----------------
+Time: 2026-03-18 22:26:56
+User: hey
+Bot: Hello, how can I help?
+-----------------
+Time: 2026-03-18 22:27:09
+User: how are you 
+Bot: I am fine
+-----------------
